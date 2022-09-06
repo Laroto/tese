@@ -1,0 +1,8 @@
+prefix=/home/pedrosr/tese_ws/install
+
+Name: filtragem
+Description: Description of filtragem
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs sensor_msgs message_filters tf2_geometry_msgs pcl_conversions pcl_ros
