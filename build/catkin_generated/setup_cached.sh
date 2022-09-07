@@ -8,4 +8,3 @@
 
 # modified environment variables
 export PWD='/home/pedrosr/tese/build'
-export ROS_PACKAGE_PATH='/home/pedrosr/tese/src:/home/pedrosr/catkin_ws/src:/home/pedrosr/atlantis_ws/src:/opt/ros/noetic/share'

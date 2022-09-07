@@ -122,3 +122,11 @@
 /home/pedrosr/tese/build/filtragem/CMakeFiles/bond_generate_messages_nodejs.dir
 /home/pedrosr/tese/build/filtragem/CMakeFiles/std_srvs_generate_messages_nodejs.dir
 /home/pedrosr/tese/build/filtragem/CMakeFiles/nodelet_generate_messages_py.dir
+/home/pedrosr/tese/build/movimento/CMakeFiles/install/strip.dir
+/home/pedrosr/tese/build/movimento/CMakeFiles/install/local.dir
+/home/pedrosr/tese/build/movimento/CMakeFiles/install.dir
+/home/pedrosr/tese/build/movimento/CMakeFiles/list_install_components.dir
+/home/pedrosr/tese/build/movimento/CMakeFiles/rebuild_cache.dir
+/home/pedrosr/tese/build/movimento/CMakeFiles/edit_cache.dir
+/home/pedrosr/tese/build/movimento/CMakeFiles/test.dir
+/home/pedrosr/tese/build/movimento/CMakeFiles/moveL.dir

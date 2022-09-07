@@ -24,7 +24,15 @@ void callback (const sensor_msgs::ImuConstPtr& imu, const sensor_msgs::PointClou
     pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud (new pcl::PointCloud<pcl::PointXYZ>);
     pcl::fromPCLPointCloud2(pcl_pc2, *temp_cloud);
 
-    Eigen::Matrix3f mat3 = Eigen::Quaternionf(-imu->orientation.w, imu->orientation.x, imu->orientation.y, imu->orientation.z).toRotationMatrix();
+    tf2::Quaternion q;
+    q.setX (imu->orientation.x);
+    q.setY (imu->orientation.y);
+    q.setZ (imu->orientation.z);
+    q.setW (imu->orientation.w);
+    q = q.inverse();
+
+
+    Eigen::Matrix3f mat3 = Eigen::Quaternionf(q.getW(), q.getX(), q.getY(), q.getZ()).toRotationMatrix();
     Eigen::Matrix4f mat4 = Eigen::Matrix4f::Identity();
     mat4.block(0,0,3,3) = mat3;
 

@@ -1,4 +1,5 @@
 #include <ros/ros.h>
+
 #include <sensor_msgs/PointCloud2.h>
 #include <sensor_msgs/Imu.h>
 #include <message_filters/subscriber.h>
@@ -19,31 +20,55 @@ ros::Publisher pub;
 
 void callback (const sensor_msgs::ImuConstPtr& imu, const sensor_msgs::PointCloud2ConstPtr& ptc)
 {
-    pcl::PCLPointCloud2 pcl_pc2;
-    pcl_conversions::toPCL (*ptc, pcl_pc2);
-    pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud (new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::fromPCLPointCloud2(pcl_pc2, *temp_cloud);
+    long int len = ptc->data.size();
+    ROS_INFO("original size: %ld",len);
+    ROS_INFO("calculated size: %d", ptc->width*ptc->height *ptc->point_step);
 
-    Eigen::Matrix3f mat3 = Eigen::Quaternionf(-imu->orientation.w, imu->orientation.x, imu->orientation.y, imu->orientation.z).toRotationMatrix();
-    Eigen::Matrix4f mat4 = Eigen::Matrix4f::Identity();
-    mat4.block(0,0,3,3) = mat3;
+    tf2::Quaternion ori;
+    ori.setX (imu->orientation.x);
+    ori.setY (imu->orientation.y);
+    ori.setZ (imu->orientation.z);
+    ori.setW (imu->orientation.w);  
+    
+    std::vector<tf2::Quaternion> q_vec;
 
-    pcl::PointCloud<pcl::PointXYZ> res_pc;
-    pcl::PointCloud<pcl::PointXYZ>::Ptr ptr_res_pc (new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::transformPointCloud(*temp_cloud, *ptr_res_pc, mat4);
+    for(int i=0; i<len; i+=3)
+    {
+        tf2::Quaternion q;
+        q.setX (ptc->data[i]);
+        q.setY (ptc->data[i+1]);
+        q.setZ (ptc->data[i+2]);
+        q.setW (1);
+        q.normalize();
+
+        q_vec.push_back( q.operator*=(ori.operator*=(q.inverse())) ); //problema
+    }
+
+    int counter = 0;
+    std::vector<uint8_t> data;
+
+    for(int i=0; i<q_vec.size(); i++)
+    {
+        data.push_back ( q_vec[counter].getX());
+        data.push_back ( q_vec[counter].getY());
+        data.push_back ( q_vec[counter].getZ());
+        counter++;
+    }
 
     sensor_msgs::PointCloud2 msg;
-    pcl::toROSMsg(*ptr_res_pc,msg);
+    msg = *ptc;   
+    msg.data = data;    
+    //msg.data = ptc->data;
     pub.publish(msg);
 }
 
 int main(int argc, char** argv)
 {
-    ros::init(argc, argv, "estabilizador");
+    ros::init(argc, argv, "mat");
     ros::NodeHandle nh;
     ros::NodeHandle n;
 
-    pub = n.advertise<sensor_msgs::PointCloud2>("filtred_PointCloud2", 1);
+    pub = n.advertise<sensor_msgs::PointCloud2>("filtred_PointCloud2__mat", 1);
 
     message_filters::Subscriber<sensor_msgs::Imu> imu_sub (nh, "/fw_asv0/imu", 1);
     message_filters::Subscriber<sensor_msgs::PointCloud2> ptc_sub (nh, "/fw_asv0/velodyne_points", 1);
