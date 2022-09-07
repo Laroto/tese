@@ -13,7 +13,6 @@
 #include <pcl/conversions.h>
 #include <pcl_ros/transforms.h>
 
-
 ros::Subscriber sub;
 ros::Publisher pub;
 
@@ -51,7 +50,7 @@ int main(int argc, char** argv)
     ros::NodeHandle nh;
     ros::NodeHandle n;
 
-    pub = n.advertise<sensor_msgs::PointCloud2>("filtred_PointCloud2", 1);
+    pub = n.advertise<sensor_msgs::PointCloud2>("stable_PointCloud2", 1);
 
     message_filters::Subscriber<sensor_msgs::Imu> imu_sub (nh, "/fw_asv0/imu", 1);
     message_filters::Subscriber<sensor_msgs::PointCloud2> ptc_sub (nh, "/fw_asv0/velodyne_points", 1);

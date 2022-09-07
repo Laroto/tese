@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+filtragem/CMakeFiles/passthrough.dir/rule:
+	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/passthrough.dir/rule
+.PHONY : filtragem/CMakeFiles/passthrough.dir/rule
+
+# Convenience name for target.
+passthrough: filtragem/CMakeFiles/passthrough.dir/rule
+
+.PHONY : passthrough
+
+# fast build rule for target.
+passthrough/fast:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/build
+.PHONY : passthrough/fast
+
+# Convenience name for target.
 filtragem/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
 	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/tf_generate_messages_nodejs.dir/rule
 .PHONY : filtragem/CMakeFiles/tf_generate_messages_nodejs.dir/rule
@@ -451,21 +466,6 @@ actionlib_generate_messages_cpp: filtragem/CMakeFiles/actionlib_generate_message
 actionlib_generate_messages_cpp/fast:
 	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make filtragem/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
-
-# Convenience name for target.
-filtragem/CMakeFiles/mat.dir/rule:
-	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/mat.dir/rule
-.PHONY : filtragem/CMakeFiles/mat.dir/rule
-
-# Convenience name for target.
-mat: filtragem/CMakeFiles/mat.dir/rule
-
-.PHONY : mat
-
-# fast build rule for target.
-mat/fast:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/mat.dir/build.make filtragem/CMakeFiles/mat.dir/build
-.PHONY : mat/fast
 
 # Convenience name for target.
 filtragem/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
@@ -1394,32 +1394,32 @@ src/estabilizador.cpp.s:
 	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador.dir/build.make filtragem/CMakeFiles/estabilizador.dir/src/estabilizador.cpp.s
 .PHONY : src/estabilizador.cpp.s
 
-src/mat.o: src/mat.cpp.o
+src/passthrough.o: src/passthrough.cpp.o
 
-.PHONY : src/mat.o
+.PHONY : src/passthrough.o
 
 # target to build an object file
-src/mat.cpp.o:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/mat.dir/build.make filtragem/CMakeFiles/mat.dir/src/mat.cpp.o
-.PHONY : src/mat.cpp.o
+src/passthrough.cpp.o:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/src/passthrough.cpp.o
+.PHONY : src/passthrough.cpp.o
 
-src/mat.i: src/mat.cpp.i
+src/passthrough.i: src/passthrough.cpp.i
 
-.PHONY : src/mat.i
+.PHONY : src/passthrough.i
 
 # target to preprocess a source file
-src/mat.cpp.i:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/mat.dir/build.make filtragem/CMakeFiles/mat.dir/src/mat.cpp.i
-.PHONY : src/mat.cpp.i
+src/passthrough.cpp.i:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/src/passthrough.cpp.i
+.PHONY : src/passthrough.cpp.i
 
-src/mat.s: src/mat.cpp.s
+src/passthrough.s: src/passthrough.cpp.s
 
-.PHONY : src/mat.s
+.PHONY : src/passthrough.s
 
 # target to generate assembly for a file
-src/mat.cpp.s:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/mat.dir/build.make filtragem/CMakeFiles/mat.dir/src/mat.cpp.s
-.PHONY : src/mat.cpp.s
+src/passthrough.cpp.s:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/src/passthrough.cpp.s
+.PHONY : src/passthrough.cpp.s
 
 # Help Target
 help:
@@ -1432,6 +1432,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... passthrough"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
@@ -1452,7 +1453,6 @@ help:
 	@echo "... nodelet_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_cpp"
-	@echo "... mat"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_eus"
@@ -1517,9 +1517,9 @@ help:
 	@echo "... src/estabilizador.o"
 	@echo "... src/estabilizador.i"
 	@echo "... src/estabilizador.s"
-	@echo "... src/mat.o"
-	@echo "... src/mat.i"
-	@echo "... src/mat.s"
+	@echo "... src/passthrough.o"
+	@echo "... src/passthrough.i"
+	@echo "... src/passthrough.s"
 .PHONY : help
 
 

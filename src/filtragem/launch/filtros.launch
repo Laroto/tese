@@ -1,0 +1,14 @@
+<launch>
+
+    <group>
+        <node pkg="filtragem" name="estabilizador" type="estabilizador"/>
+    </group>
+
+    <group>
+        <node pkg="filtragem" name="passthrough" type="passthrough"/>
+
+        <!-- Parametros -->
+        <param name="/altura" value="-0.4" />
+    </group>
+ 
+</launch>

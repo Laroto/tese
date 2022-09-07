@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named passthrough
+
+# Build rule for target.
+passthrough: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 passthrough
+.PHONY : passthrough
+
+# fast build rule for target.
+passthrough/fast:
+	$(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/build
+.PHONY : passthrough/fast
+
+#=============================================================================
 # Target rules for targets named tf_generate_messages_nodejs
 
 # Build rule for target.
@@ -530,19 +543,6 @@ actionlib_generate_messages_cpp: cmake_check_build_system
 actionlib_generate_messages_cpp/fast:
 	$(MAKE) -f filtragem/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make filtragem/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named mat
-
-# Build rule for target.
-mat: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mat
-.PHONY : mat
-
-# fast build rule for target.
-mat/fast:
-	$(MAKE) -f filtragem/CMakeFiles/mat.dir/build.make filtragem/CMakeFiles/mat.dir/build
-.PHONY : mat/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
@@ -1359,6 +1359,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... passthrough"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
@@ -1378,7 +1379,6 @@ help:
 	@echo "... nodelet_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_cpp"
-	@echo "... mat"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_eus"
