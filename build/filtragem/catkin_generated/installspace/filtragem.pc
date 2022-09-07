@@ -1,4 +1,4 @@
-prefix=/home/pedrosr/tese_ws/install
+prefix=/home/pedrosr/tese/install
 
 Name: filtragem
 Description: Description of filtragem

@@ -67,14 +67,14 @@ set(filtragem_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(filtragem_SOURCE_PREFIX /home/pedrosr/tese_ws/src/filtragem)
-  set(filtragem_DEVEL_PREFIX /home/pedrosr/tese_ws/devel)
+  set(filtragem_SOURCE_PREFIX /home/pedrosr/tese/src/filtragem)
+  set(filtragem_DEVEL_PREFIX /home/pedrosr/tese/devel)
   set(filtragem_INSTALL_PREFIX "")
   set(filtragem_PREFIX ${filtragem_DEVEL_PREFIX})
 else()
   set(filtragem_SOURCE_PREFIX "")
   set(filtragem_DEVEL_PREFIX "")
-  set(filtragem_INSTALL_PREFIX /home/pedrosr/tese_ws/install)
+  set(filtragem_INSTALL_PREFIX /home/pedrosr/tese/install)
   set(filtragem_PREFIX ${filtragem_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/pedrosr/tese_ws/install/lib;/home/pedrosr/tese_ws/devel/lib;/home/pedrosr/catkin_ws/devel/lib;/home/pedrosr/atlantis_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/pedrosr/tese/install/lib;/home/pedrosr/tese_ws/devel/lib;/home/pedrosr/catkin_ws/devel/lib;/home/pedrosr/atlantis_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

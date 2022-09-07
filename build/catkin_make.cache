@@ -1,2 +1,2 @@
 filtragem
--DCATKIN_DEVEL_PREFIX=/home/pedrosr/tese_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pedrosr/tese_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/pedrosr/tese/devel -DCMAKE_INSTALL_PREFIX=/home/pedrosr/tese/install -G Unix Makefiles

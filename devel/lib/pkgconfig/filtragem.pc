@@ -1,4 +1,4 @@
-prefix=/home/pedrosr/tese_ws/devel
+prefix=/home/pedrosr/tese/devel
 
 Name: filtragem
 Description: Description of filtragem
