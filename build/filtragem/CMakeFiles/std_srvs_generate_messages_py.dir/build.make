@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pedrosr/tese_ws/src
+CMAKE_SOURCE_DIR = /home/pedrosr/tese/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pedrosr/tese_ws/build
+CMAKE_BINARY_DIR = /home/pedrosr/tese/build
 
 # Utility rule file for std_srvs_generate_messages_py.
 
@@ -63,10 +63,10 @@ filtragem/CMakeFiles/std_srvs_generate_messages_py.dir/build: std_srvs_generate_
 .PHONY : filtragem/CMakeFiles/std_srvs_generate_messages_py.dir/build
 
 filtragem/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
-	cd /home/pedrosr/tese_ws/build/filtragem && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/pedrosr/tese/build/filtragem && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : filtragem/CMakeFiles/std_srvs_generate_messages_py.dir/clean
 
 filtragem/CMakeFiles/std_srvs_generate_messages_py.dir/depend:
-	cd /home/pedrosr/tese_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pedrosr/tese_ws/src /home/pedrosr/tese_ws/src/filtragem /home/pedrosr/tese_ws/build /home/pedrosr/tese_ws/build/filtragem /home/pedrosr/tese_ws/build/filtragem/CMakeFiles/std_srvs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pedrosr/tese/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pedrosr/tese/src /home/pedrosr/tese/src/filtragem /home/pedrosr/tese/build /home/pedrosr/tese/build/filtragem /home/pedrosr/tese/build/filtragem/CMakeFiles/std_srvs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : filtragem/CMakeFiles/std_srvs_generate_messages_py.dir/depend
 

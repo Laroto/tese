@@ -337,9 +337,6 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests3
 
-//The directory containing a CMake configuration file for PCL.
-PCL_DIR:PATH=PCL_DIR-NOTFOUND
-
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3
 
@@ -405,12 +402,6 @@ cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/noetic/share/dynamic_reconfigure/cmake
-
-//Value Computed by CMake
-estabilizador_BINARY_DIR:STATIC=/home/pedrosr/tese_ws/build/filtragem
-
-//Value Computed by CMake
-estabilizador_SOURCE_DIR:STATIC=/home/pedrosr/tese_ws/src/filtragem
 
 //Value Computed by CMake
 filtragem_BINARY_DIR:STATIC=/home/pedrosr/tese/build/filtragem
@@ -502,9 +493,6 @@ nodelet_DIR:PATH=/opt/ros/noetic/share/nodelet/cmake
 
 //The directory containing a CMake configuration file for nodelet_topic_tools.
 nodelet_topic_tools_DIR:PATH=/opt/ros/noetic/share/nodelet_topic_tools/cmake
-
-//The directory containing a CMake configuration file for pcl.
-pcl_DIR:PATH=pcl_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for pcl_conversions.
 pcl_conversions_DIR:PATH=/opt/ros/noetic/share/pcl_conversions/cmake
@@ -603,7 +591,7 @@ xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 
 //catkin environment
 CATKIN_ENV:INTERNAL=/home/pedrosr/tese/build/catkin_generated/env_cached.sh
-CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/pedrosr/tese_ws/build/test_results
+CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/pedrosr/tese/build/test_results
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -692,7 +680,7 @@ CMAKE_HAVE_PTHREAD_CREATE:INTERNAL=1
 CMAKE_HAVE_PTHREAD_H:INTERNAL=1
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/pedrosr/tese_ws/src
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/pedrosr/tese/src
 //ADVANCED property for variable: CMAKE_INSTALL_BINDIR
 CMAKE_INSTALL_BINDIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_INSTALL_DATADIR

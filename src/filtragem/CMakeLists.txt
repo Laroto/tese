@@ -86,6 +86,11 @@ add_dependencies(mat ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGE
 ## Specify libraries to link a library or executable target against
 target_link_libraries(
     estabilizador
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+)
+
+target_link_libraries(
     mat
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}

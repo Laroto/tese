@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/pedrosr/tese_ws/devel/lib/filtragem/estabilizador"
-  "/home/pedrosr/tese_ws/devel/lib/filtragem/estabilizador.pdb"
+  "/home/pedrosr/tese/devel/lib/filtragem/estabilizador"
+  "/home/pedrosr/tese/devel/lib/filtragem/estabilizador.pdb"
   "CMakeFiles/estabilizador.dir/src/estabilizador.cpp.o"
 )
 

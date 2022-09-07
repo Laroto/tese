@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pedrosr/tese_ws/src/filtragem/src/estabilizador.cpp
+/home/pedrosr/tese/src/filtragem/src/estabilizador.cpp
 ros/ros.h
 -
 sensor_msgs/PointCloud2.h
