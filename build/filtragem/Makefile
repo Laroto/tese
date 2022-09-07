@@ -273,6 +273,21 @@ topic_tools_generate_messages_eus/fast:
 .PHONY : topic_tools_generate_messages_eus/fast
 
 # Convenience name for target.
+filtragem/CMakeFiles/noise_remove.dir/rule:
+	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/noise_remove.dir/rule
+.PHONY : filtragem/CMakeFiles/noise_remove.dir/rule
+
+# Convenience name for target.
+noise_remove: filtragem/CMakeFiles/noise_remove.dir/rule
+
+.PHONY : noise_remove
+
+# fast build rule for target.
+noise_remove/fast:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/build
+.PHONY : noise_remove/fast
+
+# Convenience name for target.
 filtragem/CMakeFiles/estabilizador.dir/rule:
 	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/estabilizador.dir/rule
 .PHONY : filtragem/CMakeFiles/estabilizador.dir/rule
@@ -1394,6 +1409,33 @@ src/estabilizador.cpp.s:
 	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador.dir/build.make filtragem/CMakeFiles/estabilizador.dir/src/estabilizador.cpp.s
 .PHONY : src/estabilizador.cpp.s
 
+src/noise_remove.o: src/noise_remove.cpp.o
+
+.PHONY : src/noise_remove.o
+
+# target to build an object file
+src/noise_remove.cpp.o:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/src/noise_remove.cpp.o
+.PHONY : src/noise_remove.cpp.o
+
+src/noise_remove.i: src/noise_remove.cpp.i
+
+.PHONY : src/noise_remove.i
+
+# target to preprocess a source file
+src/noise_remove.cpp.i:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/src/noise_remove.cpp.i
+.PHONY : src/noise_remove.cpp.i
+
+src/noise_remove.s: src/noise_remove.cpp.s
+
+.PHONY : src/noise_remove.s
+
+# target to generate assembly for a file
+src/noise_remove.cpp.s:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/src/noise_remove.cpp.s
+.PHONY : src/noise_remove.cpp.s
+
 src/passthrough.o: src/passthrough.cpp.o
 
 .PHONY : src/passthrough.o
@@ -1439,6 +1481,7 @@ help:
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_eus"
+	@echo "... noise_remove"
 	@echo "... estabilizador"
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_lisp"
@@ -1517,6 +1560,9 @@ help:
 	@echo "... src/estabilizador.o"
 	@echo "... src/estabilizador.i"
 	@echo "... src/estabilizador.s"
+	@echo "... src/noise_remove.o"
+	@echo "... src/noise_remove.i"
+	@echo "... src/noise_remove.s"
 	@echo "... src/passthrough.o"
 	@echo "... src/passthrough.i"
 	@echo "... src/passthrough.s"

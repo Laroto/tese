@@ -47,6 +47,7 @@
 /home/pedrosr/tese/build/filtragem/CMakeFiles/topic_tools_generate_messages_nodejs.dir
 /home/pedrosr/tese/build/filtragem/CMakeFiles/topic_tools_generate_messages_lisp.dir
 /home/pedrosr/tese/build/filtragem/CMakeFiles/topic_tools_generate_messages_eus.dir
+/home/pedrosr/tese/build/filtragem/CMakeFiles/noise_remove.dir
 /home/pedrosr/tese/build/filtragem/CMakeFiles/estabilizador.dir
 /home/pedrosr/tese/build/filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir
 /home/pedrosr/tese/build/filtragem/CMakeFiles/std_srvs_generate_messages_lisp.dir

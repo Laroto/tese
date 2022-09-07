@@ -10,5 +10,13 @@
         <!-- Parametros -->
         <param name="/altura" value="-0.4" />
     </group>
+
+    <group>
+        <node pkg="filtragem" name="noise_remove" type="noise_remove"/>
+
+        <!-- Parametros -->
+        <param name="/meanK" value="50" />
+        <param name="/threshold" value="1" />
+    </group>
  
 </launch>

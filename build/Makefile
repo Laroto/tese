@@ -376,6 +376,19 @@ topic_tools_generate_messages_eus/fast:
 .PHONY : topic_tools_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named noise_remove
+
+# Build rule for target.
+noise_remove: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 noise_remove
+.PHONY : noise_remove
+
+# fast build rule for target.
+noise_remove/fast:
+	$(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/build
+.PHONY : noise_remove/fast
+
+#=============================================================================
 # Target rules for targets named estabilizador
 
 # Build rule for target.
@@ -1366,6 +1379,7 @@ help:
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_eus"
+	@echo "... noise_remove"
 	@echo "... estabilizador"
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_lisp"

@@ -83,6 +83,7 @@ clean: movimento/clean
 
 # Recursive "all" directory target.
 filtragem/all: filtragem/CMakeFiles/passthrough.dir/all
+filtragem/all: filtragem/CMakeFiles/noise_remove.dir/all
 filtragem/all: filtragem/CMakeFiles/estabilizador.dir/all
 
 .PHONY : filtragem/all
@@ -100,6 +101,7 @@ filtragem/clean: filtragem/CMakeFiles/tf_generate_messages_cpp.dir/clean
 filtragem/clean: filtragem/CMakeFiles/topic_tools_generate_messages_nodejs.dir/clean
 filtragem/clean: filtragem/CMakeFiles/topic_tools_generate_messages_lisp.dir/clean
 filtragem/clean: filtragem/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
+filtragem/clean: filtragem/CMakeFiles/noise_remove.dir/clean
 filtragem/clean: filtragem/CMakeFiles/estabilizador.dir/clean
 filtragem/clean: filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir/clean
 filtragem/clean: filtragem/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
@@ -579,7 +581,7 @@ filtragem/CMakeFiles/passthrough.dir/all: filtragem/CMakeFiles/std_srvs_generate
 filtragem/CMakeFiles/passthrough.dir/all: filtragem/CMakeFiles/nodelet_generate_messages_py.dir/all
 	$(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/depend
 	$(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pedrosr/tese/build/CMakeFiles --progress-num=13,14 "Built target passthrough"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pedrosr/tese/build/CMakeFiles --progress-num=15,16 "Built target passthrough"
 .PHONY : filtragem/CMakeFiles/passthrough.dir/all
 
 # Build rule for subdir invocation for target.
@@ -760,6 +762,110 @@ topic_tools_generate_messages_eus: filtragem/CMakeFiles/topic_tools_generate_mes
 filtragem/CMakeFiles/topic_tools_generate_messages_eus.dir/clean:
 	$(MAKE) -f filtragem/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make filtragem/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
 .PHONY : filtragem/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target filtragem/CMakeFiles/noise_remove.dir
+
+# All Build rule for target.
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/topic_tools_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/topic_tools_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/topic_tools_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/pcl_msgs_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/pcl_msgs_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/nodelet_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_msgs_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_msgs_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/bond_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/bond_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/topic_tools_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/nodelet_topic_tools_gencfg.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/roscpp_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf2_msgs_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/roscpp_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_srvs_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/pcl_ros_gencfg.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/bond_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf2_msgs_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/actionlib_msgs_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/bond_generate_messages_py.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/nodelet_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/nodelet_generate_messages_lisp.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/nodelet_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/bond_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+filtragem/CMakeFiles/noise_remove.dir/all: filtragem/CMakeFiles/nodelet_generate_messages_py.dir/all
+	$(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/depend
+	$(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pedrosr/tese/build/CMakeFiles --progress-num=13,14 "Built target noise_remove"
+.PHONY : filtragem/CMakeFiles/noise_remove.dir/all
+
+# Build rule for subdir invocation for target.
+filtragem/CMakeFiles/noise_remove.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pedrosr/tese/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/noise_remove.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pedrosr/tese/build/CMakeFiles 0
+.PHONY : filtragem/CMakeFiles/noise_remove.dir/rule
+
+# Convenience name for target.
+noise_remove: filtragem/CMakeFiles/noise_remove.dir/rule
+
+.PHONY : noise_remove
+
+# clean rule for target.
+filtragem/CMakeFiles/noise_remove.dir/clean:
+	$(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/clean
+.PHONY : filtragem/CMakeFiles/noise_remove.dir/clean
 
 #=============================================================================
 # Target rules for target filtragem/CMakeFiles/estabilizador.dir
