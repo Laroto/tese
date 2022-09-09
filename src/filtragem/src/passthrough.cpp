@@ -17,9 +17,6 @@ float altura;
 
 void callback (const sensor_msgs::PointCloud2ConstPtr& ptc)
 {
-
-    ROS_INFO("altura: %f",altura);
-
     pcl::PCLPointCloud2 pcl_pc2;
     pcl_conversions::toPCL (*ptc, pcl_pc2);
     pcl::PointCloud<pcl::PointXYZ>::Ptr temp_cloud (new pcl::PointCloud<pcl::PointXYZ>);
