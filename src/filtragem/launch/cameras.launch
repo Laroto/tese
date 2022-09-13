@@ -1,5 +1,7 @@
 <launch>
 
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find filtragem)/rviz/cameras.rviz"/>
+
     <group>
         <node pkg="filtragem" name="blend_cams" type="blend_cams"/>
 

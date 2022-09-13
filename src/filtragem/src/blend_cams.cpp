@@ -2,10 +2,13 @@
 
 #include <opencv4/opencv2/opencv.hpp>
 
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+
 #include <message_filters/subscriber.h>
 #include <message_filters/sync_policies/approximate_time.h>
 #include <message_filters/synchronizer.h>
 
+#include <sensor_msgs/Imu.h>
 #include <sensor_msgs/Image.h>
 #include <sensor_msgs/image_encodings.h>
 #include <std_msgs/Header.h>
@@ -15,16 +18,15 @@
 
 ros::Publisher pub;
 
-float alpha;
-
-void callback (const sensor_msgs::ImageConstPtr& left, const sensor_msgs::ImageConstPtr& right)
+void callback (const sensor_msgs::ImageConstPtr& cam_msg, const sensor_msgs::ImuConstPtr& imu_msg)
 {
-    cv_bridge::CvImagePtr cv_ptr_left, cv_ptr_right, dest_ptr;
+    cv_bridge::CvImagePtr cam, res;
+
+    ROS_INFO("Subscribed");
 
     try
     {
-        cv_ptr_left = cv_bridge::toCvCopy(left, sensor_msgs::image_encodings::RGB8);
-        cv_ptr_right = cv_bridge::toCvCopy(right, sensor_msgs::image_encodings::RGB8);
+        cam = cv_bridge::toCvCopy(cam_msg, sensor_msgs::image_encodings::RGB8);
     }
     catch (cv_bridge::Exception& e)
     {
@@ -32,7 +34,25 @@ void callback (const sensor_msgs::ImageConstPtr& left, const sensor_msgs::ImageC
         return;
     }
 
-    pub.publish(cv_ptr_left->toImageMsg());
+    tf2::Quaternion q;
+    q.setX(imu_msg->orientation.x);
+    q.setY(imu_msg->orientation.y);
+    q.setZ(imu_msg->orientation.z);
+    q.setW(imu_msg->orientation.w);
+    q.inverse();
+
+    tf2::Matrix3x3 m(q);
+    double roll, pitch, yaw;
+    m.getRPY(roll, pitch, yaw);
+
+    cv::Point2f pc(cam->image.cols/2., cam->image.rows/2.);
+    cv::Mat rot;
+    rot = cv::getRotationMatrix2D(pc, roll, 1.0);    
+    cv::warpAffine (cam->image, res->image, rot, cam->image.size());
+
+    cv::imwrite("rotated_im.png", res->image);
+
+    pub.publish(res->toImageMsg());
 }
 
 int main(int argc, char** argv)
@@ -41,15 +61,12 @@ int main(int argc, char** argv)
 
     ros::NodeHandle nh;
 
-    nh.param<float>("/alpha", alpha, 0.5);
-    //nh.param<int>("/max_search", max_search, 50);
-
     pub = nh.advertise<sensor_msgs::Image>("blended_image", 1);
 
-    message_filters::Subscriber<sensor_msgs::Image> left_sub (nh, "/fw_asv0/camera/left/image_raw", 1);
-    message_filters::Subscriber<sensor_msgs::Image> right_sub (nh, "/fw_asv0/camera/right/image_raw", 1);
-    typedef message_filters::sync_policies::ApproximateTime <sensor_msgs::Image, sensor_msgs::Image> myPolicy ;
-    message_filters::Synchronizer <myPolicy> sync (myPolicy(10), left_sub, right_sub);
+    message_filters::Subscriber<sensor_msgs::Image> cam_sub (nh, "/fw_asv0/camera/left/image_raw", 1);
+    message_filters::Subscriber<sensor_msgs::Imu> imu_sub (nh, "/fw_asv0/imu", 1);
+    typedef message_filters::sync_policies::ApproximateTime <sensor_msgs::Image, sensor_msgs::Imu> myPolicy ;
+    message_filters::Synchronizer <myPolicy> sync (myPolicy(1), cam_sub, imu_sub);
     sync.registerCallback(&callback);
     
     ros::spin();
