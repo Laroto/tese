@@ -1,0 +1,10 @@
+<launch>
+
+    <group>
+        <node pkg="filtragem" name="blend_cams" type="blend_cams"/>
+
+        <!-- Parametros -->
+        <param name="/alpha" value="0.45" />
+    </group>
+ 
+</launch>

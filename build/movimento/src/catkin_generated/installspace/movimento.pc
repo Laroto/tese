@@ -1,8 +1,0 @@
-prefix=/home/pedrosr/tese/install
-
-Name: movimento
-Description: Description of movimento
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: roscpp std_msgs sensor_msgs message_filters tf2_geometry_msgs pcl_conversions pcl_ros

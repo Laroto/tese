@@ -1,0 +1,24 @@
+<launch>
+
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find filtragem)/rviz/filtros.rviz"/>
+
+    <group>
+        <node pkg="filtragem" name="estabilizador" type="estabilizador"/>
+    </group>
+
+    <group>
+        <node pkg="filtragem" name="passthrough" type="passthrough"/>
+
+        <!-- Parametros -->
+        <param name="/altura" value="-0.45" />
+    </group>
+
+    <group>
+        <node pkg="filtragem" name="noise_remove" type="noise_remove"/>
+
+        <!-- Parametros -->
+        <param name="/meanK" value="50" />
+        <param name="/threshold" value="5" />
+    </group>
+ 
+</launch>

@@ -168,19 +168,34 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-filtragem/CMakeFiles/passthrough.dir/rule:
-	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/passthrough.dir/rule
-.PHONY : filtragem/CMakeFiles/passthrough.dir/rule
+filtragem/CMakeFiles/noise_remove_lidar.dir/rule:
+	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/noise_remove_lidar.dir/rule
+.PHONY : filtragem/CMakeFiles/noise_remove_lidar.dir/rule
 
 # Convenience name for target.
-passthrough: filtragem/CMakeFiles/passthrough.dir/rule
+noise_remove_lidar: filtragem/CMakeFiles/noise_remove_lidar.dir/rule
 
-.PHONY : passthrough
+.PHONY : noise_remove_lidar
 
 # fast build rule for target.
-passthrough/fast:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/build
-.PHONY : passthrough/fast
+noise_remove_lidar/fast:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove_lidar.dir/build.make filtragem/CMakeFiles/noise_remove_lidar.dir/build
+.PHONY : noise_remove_lidar/fast
+
+# Convenience name for target.
+filtragem/CMakeFiles/passthrough_lidar.dir/rule:
+	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/passthrough_lidar.dir/rule
+.PHONY : filtragem/CMakeFiles/passthrough_lidar.dir/rule
+
+# Convenience name for target.
+passthrough_lidar: filtragem/CMakeFiles/passthrough_lidar.dir/rule
+
+.PHONY : passthrough_lidar
+
+# fast build rule for target.
+passthrough_lidar/fast:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough_lidar.dir/build.make filtragem/CMakeFiles/passthrough_lidar.dir/build
+.PHONY : passthrough_lidar/fast
 
 # Convenience name for target.
 filtragem/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
@@ -273,36 +288,6 @@ topic_tools_generate_messages_eus/fast:
 .PHONY : topic_tools_generate_messages_eus/fast
 
 # Convenience name for target.
-filtragem/CMakeFiles/noise_remove.dir/rule:
-	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/noise_remove.dir/rule
-.PHONY : filtragem/CMakeFiles/noise_remove.dir/rule
-
-# Convenience name for target.
-noise_remove: filtragem/CMakeFiles/noise_remove.dir/rule
-
-.PHONY : noise_remove
-
-# fast build rule for target.
-noise_remove/fast:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/build
-.PHONY : noise_remove/fast
-
-# Convenience name for target.
-filtragem/CMakeFiles/estabilizador.dir/rule:
-	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/estabilizador.dir/rule
-.PHONY : filtragem/CMakeFiles/estabilizador.dir/rule
-
-# Convenience name for target.
-estabilizador: filtragem/CMakeFiles/estabilizador.dir/rule
-
-.PHONY : estabilizador
-
-# fast build rule for target.
-estabilizador/fast:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador.dir/build.make filtragem/CMakeFiles/estabilizador.dir/build
-.PHONY : estabilizador/fast
-
-# Convenience name for target.
 filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
 	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
 .PHONY : filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
@@ -316,6 +301,21 @@ topic_tools_generate_messages_cpp: filtragem/CMakeFiles/topic_tools_generate_mes
 topic_tools_generate_messages_cpp/fast:
 	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
 .PHONY : topic_tools_generate_messages_cpp/fast
+
+# Convenience name for target.
+filtragem/CMakeFiles/estabilizador_lidar.dir/rule:
+	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/estabilizador_lidar.dir/rule
+.PHONY : filtragem/CMakeFiles/estabilizador_lidar.dir/rule
+
+# Convenience name for target.
+estabilizador_lidar: filtragem/CMakeFiles/estabilizador_lidar.dir/rule
+
+.PHONY : estabilizador_lidar
+
+# fast build rule for target.
+estabilizador_lidar/fast:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador_lidar.dir/build.make filtragem/CMakeFiles/estabilizador_lidar.dir/build
+.PHONY : estabilizador_lidar/fast
 
 # Convenience name for target.
 filtragem/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
@@ -1158,6 +1158,21 @@ tf2_msgs_generate_messages_lisp/fast:
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+filtragem/CMakeFiles/blend_cams.dir/rule:
+	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/blend_cams.dir/rule
+.PHONY : filtragem/CMakeFiles/blend_cams.dir/rule
+
+# Convenience name for target.
+blend_cams: filtragem/CMakeFiles/blend_cams.dir/rule
+
+.PHONY : blend_cams
+
+# fast build rule for target.
+blend_cams/fast:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/blend_cams.dir/build.make filtragem/CMakeFiles/blend_cams.dir/build
+.PHONY : blend_cams/fast
+
+# Convenience name for target.
 filtragem/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/pedrosr/tese/build && $(MAKE) -f CMakeFiles/Makefile2 filtragem/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 .PHONY : filtragem/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
@@ -1382,86 +1397,113 @@ nodelet_generate_messages_py/fast:
 	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/nodelet_generate_messages_py.dir/build.make filtragem/CMakeFiles/nodelet_generate_messages_py.dir/build
 .PHONY : nodelet_generate_messages_py/fast
 
-src/estabilizador.o: src/estabilizador.cpp.o
+src/blend_cams.o: src/blend_cams.cpp.o
 
-.PHONY : src/estabilizador.o
-
-# target to build an object file
-src/estabilizador.cpp.o:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador.dir/build.make filtragem/CMakeFiles/estabilizador.dir/src/estabilizador.cpp.o
-.PHONY : src/estabilizador.cpp.o
-
-src/estabilizador.i: src/estabilizador.cpp.i
-
-.PHONY : src/estabilizador.i
-
-# target to preprocess a source file
-src/estabilizador.cpp.i:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador.dir/build.make filtragem/CMakeFiles/estabilizador.dir/src/estabilizador.cpp.i
-.PHONY : src/estabilizador.cpp.i
-
-src/estabilizador.s: src/estabilizador.cpp.s
-
-.PHONY : src/estabilizador.s
-
-# target to generate assembly for a file
-src/estabilizador.cpp.s:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador.dir/build.make filtragem/CMakeFiles/estabilizador.dir/src/estabilizador.cpp.s
-.PHONY : src/estabilizador.cpp.s
-
-src/noise_remove.o: src/noise_remove.cpp.o
-
-.PHONY : src/noise_remove.o
+.PHONY : src/blend_cams.o
 
 # target to build an object file
-src/noise_remove.cpp.o:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/src/noise_remove.cpp.o
-.PHONY : src/noise_remove.cpp.o
+src/blend_cams.cpp.o:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/blend_cams.dir/build.make filtragem/CMakeFiles/blend_cams.dir/src/blend_cams.cpp.o
+.PHONY : src/blend_cams.cpp.o
 
-src/noise_remove.i: src/noise_remove.cpp.i
+src/blend_cams.i: src/blend_cams.cpp.i
 
-.PHONY : src/noise_remove.i
+.PHONY : src/blend_cams.i
 
 # target to preprocess a source file
-src/noise_remove.cpp.i:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/src/noise_remove.cpp.i
-.PHONY : src/noise_remove.cpp.i
+src/blend_cams.cpp.i:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/blend_cams.dir/build.make filtragem/CMakeFiles/blend_cams.dir/src/blend_cams.cpp.i
+.PHONY : src/blend_cams.cpp.i
 
-src/noise_remove.s: src/noise_remove.cpp.s
+src/blend_cams.s: src/blend_cams.cpp.s
 
-.PHONY : src/noise_remove.s
+.PHONY : src/blend_cams.s
 
 # target to generate assembly for a file
-src/noise_remove.cpp.s:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/src/noise_remove.cpp.s
-.PHONY : src/noise_remove.cpp.s
+src/blend_cams.cpp.s:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/blend_cams.dir/build.make filtragem/CMakeFiles/blend_cams.dir/src/blend_cams.cpp.s
+.PHONY : src/blend_cams.cpp.s
 
-src/passthrough.o: src/passthrough.cpp.o
+src/estabilizador_lidar.o: src/estabilizador_lidar.cpp.o
 
-.PHONY : src/passthrough.o
+.PHONY : src/estabilizador_lidar.o
 
 # target to build an object file
-src/passthrough.cpp.o:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/src/passthrough.cpp.o
-.PHONY : src/passthrough.cpp.o
+src/estabilizador_lidar.cpp.o:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador_lidar.dir/build.make filtragem/CMakeFiles/estabilizador_lidar.dir/src/estabilizador_lidar.cpp.o
+.PHONY : src/estabilizador_lidar.cpp.o
 
-src/passthrough.i: src/passthrough.cpp.i
+src/estabilizador_lidar.i: src/estabilizador_lidar.cpp.i
 
-.PHONY : src/passthrough.i
+.PHONY : src/estabilizador_lidar.i
 
 # target to preprocess a source file
-src/passthrough.cpp.i:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/src/passthrough.cpp.i
-.PHONY : src/passthrough.cpp.i
+src/estabilizador_lidar.cpp.i:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador_lidar.dir/build.make filtragem/CMakeFiles/estabilizador_lidar.dir/src/estabilizador_lidar.cpp.i
+.PHONY : src/estabilizador_lidar.cpp.i
 
-src/passthrough.s: src/passthrough.cpp.s
+src/estabilizador_lidar.s: src/estabilizador_lidar.cpp.s
 
-.PHONY : src/passthrough.s
+.PHONY : src/estabilizador_lidar.s
 
 # target to generate assembly for a file
-src/passthrough.cpp.s:
-	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/src/passthrough.cpp.s
-.PHONY : src/passthrough.cpp.s
+src/estabilizador_lidar.cpp.s:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/estabilizador_lidar.dir/build.make filtragem/CMakeFiles/estabilizador_lidar.dir/src/estabilizador_lidar.cpp.s
+.PHONY : src/estabilizador_lidar.cpp.s
+
+src/noise_remove_lidar.o: src/noise_remove_lidar.cpp.o
+
+.PHONY : src/noise_remove_lidar.o
+
+# target to build an object file
+src/noise_remove_lidar.cpp.o:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove_lidar.dir/build.make filtragem/CMakeFiles/noise_remove_lidar.dir/src/noise_remove_lidar.cpp.o
+.PHONY : src/noise_remove_lidar.cpp.o
+
+src/noise_remove_lidar.i: src/noise_remove_lidar.cpp.i
+
+.PHONY : src/noise_remove_lidar.i
+
+# target to preprocess a source file
+src/noise_remove_lidar.cpp.i:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove_lidar.dir/build.make filtragem/CMakeFiles/noise_remove_lidar.dir/src/noise_remove_lidar.cpp.i
+.PHONY : src/noise_remove_lidar.cpp.i
+
+src/noise_remove_lidar.s: src/noise_remove_lidar.cpp.s
+
+.PHONY : src/noise_remove_lidar.s
+
+# target to generate assembly for a file
+src/noise_remove_lidar.cpp.s:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/noise_remove_lidar.dir/build.make filtragem/CMakeFiles/noise_remove_lidar.dir/src/noise_remove_lidar.cpp.s
+.PHONY : src/noise_remove_lidar.cpp.s
+
+src/passthrough_lidar.o: src/passthrough_lidar.cpp.o
+
+.PHONY : src/passthrough_lidar.o
+
+# target to build an object file
+src/passthrough_lidar.cpp.o:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough_lidar.dir/build.make filtragem/CMakeFiles/passthrough_lidar.dir/src/passthrough_lidar.cpp.o
+.PHONY : src/passthrough_lidar.cpp.o
+
+src/passthrough_lidar.i: src/passthrough_lidar.cpp.i
+
+.PHONY : src/passthrough_lidar.i
+
+# target to preprocess a source file
+src/passthrough_lidar.cpp.i:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough_lidar.dir/build.make filtragem/CMakeFiles/passthrough_lidar.dir/src/passthrough_lidar.cpp.i
+.PHONY : src/passthrough_lidar.cpp.i
+
+src/passthrough_lidar.s: src/passthrough_lidar.cpp.s
+
+.PHONY : src/passthrough_lidar.s
+
+# target to generate assembly for a file
+src/passthrough_lidar.cpp.s:
+	cd /home/pedrosr/tese/build && $(MAKE) -f filtragem/CMakeFiles/passthrough_lidar.dir/build.make filtragem/CMakeFiles/passthrough_lidar.dir/src/passthrough_lidar.cpp.s
+.PHONY : src/passthrough_lidar.cpp.s
 
 # Help Target
 help:
@@ -1474,16 +1516,16 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... passthrough"
+	@echo "... noise_remove_lidar"
+	@echo "... passthrough_lidar"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_eus"
-	@echo "... noise_remove"
-	@echo "... estabilizador"
 	@echo "... topic_tools_generate_messages_cpp"
+	@echo "... estabilizador_lidar"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
@@ -1542,6 +1584,7 @@ help:
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... blend_cams"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... bond_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
@@ -1557,15 +1600,18 @@ help:
 	@echo "... bond_generate_messages_nodejs"
 	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... nodelet_generate_messages_py"
-	@echo "... src/estabilizador.o"
-	@echo "... src/estabilizador.i"
-	@echo "... src/estabilizador.s"
-	@echo "... src/noise_remove.o"
-	@echo "... src/noise_remove.i"
-	@echo "... src/noise_remove.s"
-	@echo "... src/passthrough.o"
-	@echo "... src/passthrough.i"
-	@echo "... src/passthrough.s"
+	@echo "... src/blend_cams.o"
+	@echo "... src/blend_cams.i"
+	@echo "... src/blend_cams.s"
+	@echo "... src/estabilizador_lidar.o"
+	@echo "... src/estabilizador_lidar.i"
+	@echo "... src/estabilizador_lidar.s"
+	@echo "... src/noise_remove_lidar.o"
+	@echo "... src/noise_remove_lidar.i"
+	@echo "... src/noise_remove_lidar.s"
+	@echo "... src/passthrough_lidar.o"
+	@echo "... src/passthrough_lidar.i"
+	@echo "... src/passthrough_lidar.s"
 .PHONY : help
 
 

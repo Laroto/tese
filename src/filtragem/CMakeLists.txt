@@ -9,6 +9,12 @@ find_package(catkin REQUIRED COMPONENTS
   tf2_geometry_msgs
   pcl_ros
   pcl_conversions
+  cv_bridge
+  image_transport
+)
+
+find_package(
+  OpenCV REQUIRED
 )
 
 ################################################
@@ -50,6 +56,8 @@ catkin_package(
   tf2_geometry_msgs
   pcl_conversions
   pcl_ros
+  cv_bridge
+  image_transport
 )
 
 ###########
@@ -57,7 +65,8 @@ catkin_package(
 ###########
 
 include_directories(
- include
+  include
+  ${OpenCV_INCLUDE_DIRS}
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -71,9 +80,10 @@ include_directories(
 ## either from message generation or dynamic reconfigure
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-add_executable(estabilizador src/estabilizador.cpp)
-add_executable(passthrough src/passthrough.cpp)
-add_executable(noise_remove src/noise_remove.cpp)
+add_executable(estabilizador_lidar src/estabilizador_lidar.cpp)
+add_executable(passthrough_lidar src/passthrough_lidar.cpp)
+add_executable(noise_remove_lidar src/noise_remove_lidar.cpp)
+add_executable(blend_cams src/blend_cams.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -81,29 +91,37 @@ add_executable(noise_remove src/noise_remove.cpp)
 ## e.g. "rosrun someones_pkg node" instead of "rosrun someones_pkg someones_pkg_node"
 # set_target_properties(${PROJECT_NAME}_node PROPERTIES OUTPUT_NAME node PREFIX "")
 
-add_dependencies(estabilizador ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(passthrough ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_dependencies(noise_remove ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(estabilizador_lidar ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(passthrough_lidar ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(noise_remove_lidar ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(blend_cams ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(
-    estabilizador
+    estabilizador_lidar
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
 
 target_link_libraries(
-    passthrough
+    passthrough_lidar
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
 
 target_link_libraries(
-    noise_remove
+    noise_remove_lidar
     ${catkin_LIBRARIES}
     ${PCL_LIBRARIES}
 )
 
+target_link_libraries(
+    blend_cams
+    ${catkin_LIBRARIES}
+    ${PCL_LIBRARIES}
+    ${OpenCV_LIBRARIES}
+)
 
 #############
 ## Install ##

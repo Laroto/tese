@@ -285,17 +285,30 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named passthrough
+# Target rules for targets named noise_remove_lidar
 
 # Build rule for target.
-passthrough: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 passthrough
-.PHONY : passthrough
+noise_remove_lidar: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 noise_remove_lidar
+.PHONY : noise_remove_lidar
 
 # fast build rule for target.
-passthrough/fast:
-	$(MAKE) -f filtragem/CMakeFiles/passthrough.dir/build.make filtragem/CMakeFiles/passthrough.dir/build
-.PHONY : passthrough/fast
+noise_remove_lidar/fast:
+	$(MAKE) -f filtragem/CMakeFiles/noise_remove_lidar.dir/build.make filtragem/CMakeFiles/noise_remove_lidar.dir/build
+.PHONY : noise_remove_lidar/fast
+
+#=============================================================================
+# Target rules for targets named passthrough_lidar
+
+# Build rule for target.
+passthrough_lidar: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 passthrough_lidar
+.PHONY : passthrough_lidar
+
+# fast build rule for target.
+passthrough_lidar/fast:
+	$(MAKE) -f filtragem/CMakeFiles/passthrough_lidar.dir/build.make filtragem/CMakeFiles/passthrough_lidar.dir/build
+.PHONY : passthrough_lidar/fast
 
 #=============================================================================
 # Target rules for targets named tf_generate_messages_nodejs
@@ -376,32 +389,6 @@ topic_tools_generate_messages_eus/fast:
 .PHONY : topic_tools_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named noise_remove
-
-# Build rule for target.
-noise_remove: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 noise_remove
-.PHONY : noise_remove
-
-# fast build rule for target.
-noise_remove/fast:
-	$(MAKE) -f filtragem/CMakeFiles/noise_remove.dir/build.make filtragem/CMakeFiles/noise_remove.dir/build
-.PHONY : noise_remove/fast
-
-#=============================================================================
-# Target rules for targets named estabilizador
-
-# Build rule for target.
-estabilizador: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 estabilizador
-.PHONY : estabilizador
-
-# fast build rule for target.
-estabilizador/fast:
-	$(MAKE) -f filtragem/CMakeFiles/estabilizador.dir/build.make filtragem/CMakeFiles/estabilizador.dir/build
-.PHONY : estabilizador/fast
-
-#=============================================================================
 # Target rules for targets named topic_tools_generate_messages_cpp
 
 # Build rule for target.
@@ -413,6 +400,19 @@ topic_tools_generate_messages_cpp: cmake_check_build_system
 topic_tools_generate_messages_cpp/fast:
 	$(MAKE) -f filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make filtragem/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
 .PHONY : topic_tools_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named estabilizador_lidar
+
+# Build rule for target.
+estabilizador_lidar: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 estabilizador_lidar
+.PHONY : estabilizador_lidar
+
+# fast build rule for target.
+estabilizador_lidar/fast:
+	$(MAKE) -f filtragem/CMakeFiles/estabilizador_lidar.dir/build.make filtragem/CMakeFiles/estabilizador_lidar.dir/build
+.PHONY : estabilizador_lidar/fast
 
 #=============================================================================
 # Target rules for targets named std_srvs_generate_messages_lisp
@@ -1143,6 +1143,19 @@ tf2_msgs_generate_messages_lisp/fast:
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named blend_cams
+
+# Build rule for target.
+blend_cams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 blend_cams
+.PHONY : blend_cams
+
+# fast build rule for target.
+blend_cams/fast:
+	$(MAKE) -f filtragem/CMakeFiles/blend_cams.dir/build.make filtragem/CMakeFiles/blend_cams.dir/build
+.PHONY : blend_cams/fast
+
+#=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -1372,16 +1385,16 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... passthrough"
+	@echo "... noise_remove_lidar"
+	@echo "... passthrough_lidar"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_eus"
-	@echo "... noise_remove"
-	@echo "... estabilizador"
 	@echo "... topic_tools_generate_messages_cpp"
+	@echo "... estabilizador_lidar"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_eus"
 	@echo "... std_srvs_generate_messages_cpp"
@@ -1438,6 +1451,7 @@ help:
 	@echo "... actionlib_msgs_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_lisp"
+	@echo "... blend_cams"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... bond_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"

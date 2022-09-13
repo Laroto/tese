@@ -7,4 +7,6 @@
 # new environment variables
 
 # modified environment variables
+export LD_LIBRARY_PATH='/home/pedrosr/catkin_ws/devel/lib:/home/pedrosr/atlantis_ws/devel/lib:/opt/ros/noetic/lib'
+export PKG_CONFIG_PATH='/home/pedrosr/catkin_ws/devel/lib/pkgconfig:/home/pedrosr/atlantis_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'
 export PWD='/home/pedrosr/tese/build'
